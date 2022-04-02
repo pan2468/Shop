@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Table(name="member")
 @Getter @Setter
 @ToString
-public class Member {
+public class Member extends BaseEntity{
 
     @Id
     @Column(name="member_id")
@@ -22,7 +22,6 @@ public class Member {
 
     private String name;
 
-    @Column(unique = true)
     private String email;
 
     private String password;
